@@ -1,0 +1,216 @@
+@import url('http://fonts.googleapis.com/css?family=Roboto');
+@import url('http://fonts.googleapis.com/css?family=Work+Sans');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Work Sans";
+  	font-size: 1.2em;
+  	line-height: 1.1;
+  	text-align: center;
+  	color: #1F2421;
+  }
+
+  #c {
+  	animation: bounce .5s alternate infinite ease-in;
+  }
+
+  .container h1, .container h2 {
+  	font-family: "Roboto";
+  }
+
+  .nav {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: "Roboto";
+}
+
+.nav ul {
+	list-style: none;
+}
+
+.nav-item {
+	display:inline;
+	margin-right: -1em;
+}
+
+.nav-item a {
+	display:inline-block;
+	padding:1em;
+	width: 10em;
+	text-align: center;
+	color:#FFF;
+	background: #FFC857;
+	text-decoration: none;
+	-webkit-transition: 1s;
+	transition: 1s;
+}
+
+.nav-item:first-child a {
+	border-radius:5px 0 0 5px;
+}
+
+.nav-item:last-child a {
+	border-radius:0 5px 5px 0;
+}
+
+.nav-item a:hover {
+	background:#E7E6F7;
+	color: #1F2421;
+}
+
+.res {
+	width: 100%;
+	margin: 0 auto;
+	background-color: #f6f6f6;
+	padding: 1em;
+	margin-top: 1em;
+}
+
+.res img {
+	float: left;
+	margin: .5em;
+}
+
+.article {
+	float: left;
+	display: inline-block;
+	text-align: justify;
+}
+
+.article h2 {
+	text-align: center;
+}
+
+.article p {
+	margin-top: 1em;
+}
+
+
+@media only screen and (min-width:768px) {
+  	@keyframes bounce {
+  		0% {
+  			transform: translateX(50%);
+		}
+		100% {
+			transform: translateX(-50%);
+		}
+	}
+
+	#c {
+		color: #bf9ff4;
+    	display: inline-block;
+    }
+
+    /* 3 columns */
+
+    .article {
+		width: 23.33%;
+		margin: 1em;
+		padding: 1em;
+    }
+
+    .article h2 {
+    	padding: .2em;
+    }
+
+}
+
+
+@media only screen and (min-width:992px) {
+	.article {
+		width: 17.22%;
+	}
+}
+
+
+@media only screen and (max-width:767px) {
+	@keyframes bounce {
+		0% {
+			transform: translateY(-200%);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+
+	/*.container {
+		background-color: #D90368;
+	}*/
+
+	#c {
+		color: #D90368;
+		display: block;
+	}
+
+	.change span {
+		display: none;
+	}
+
+	.change:after {
+		content: 'up and down now';
+	}
+
+	.nav {
+		width:100%;
+		padding: 0;
+		border: 1px solid black;
+  	}
+  	
+  	.nav-item {
+  		width:100%;
+    	float:left;
+    	border-radius: 0;
+  	}
+
+  	/*.nav-item a {
+  		display: block;
+  	}*/
+
+  	.container {
+		letter-spacing: 1;
+		padding-bottom: 2em;
+	}
+
+	.article {
+		width: 90%;
+		float: none;
+		padding-right: 2em;
+	}
+
+}
+
+@media only screen and (max-width:319px) {
+	.nav {
+		display: none;
+	}
+
+	.container h1 {
+		display: none;
+	}
+
+	.change:after {
+		display: none;
+	}
+
+	.container p {
+		display: none;
+	}
+
+	.container:after {
+		content: 'please update your phone :p';
+	}
+
+	.article {
+		display: none;
+	}
+
+	.res:after {
+		content: 'please update your phone :p';
+	}
+}
